@@ -1,0 +1,68 @@
+[designed_by]
+  other = "Designed von  <a href = '{{ .url }}' title = 'Linkedin Profil'>{{ .name }}</a>"
+[share_story]
+  other = "Teile Story"
+[link_copied]
+  other = "Link kopiert"
+[written_by]
+  other = "Geschrieben von"
+[author_profile]
+  other = "{{ . }}'s Profil"
+[btnReset]
+  other = "Zuruecksetzen"
+[btnSubmit]
+  other = "Absenden"
+[btnSubmitted]
+  other = "Gesendet"
+[comment]
+  other = "Kommentar"
+[noComment]
+  other = "Kein Kommentar"
+[email]
+  other = "Email"
+[name]
+  other = "Name"
+[typeInComment]
+  other = "Komment hier einfuegen..."
+[moreDay]
+  other = "Tage"
+[moreHr]
+  other = "Stunden"
+[moreMin]
+  other = "Minuten"
+[moreMonth]
+  other = "Monate"
+[moreWk]
+  other = "Woche"
+[moreYr]
+  other = "Jahr"
+[oneDay]
+  other = "Tag"
+[oneHr]
+  other = "Stunde"
+[oneMin]
+  other = "MINUTE"
+[oneMonth]
+  other = "Monat"
+[oneWk]
+  other = "Woche"
+[oneYr]
+  other = "Jahr"
+[timeAgoStr]
+  other = "vor ${timeAgo}&nbsp;${timeTag}"
+[close]
+  other = "Schliessen"
+[successTitle]
+  other = "Review submitted"
+[successMsg]
+  other = "Danke fuer deine Nachricht! Sobald diese geprueft wurde, erscheint sie auf der Seite"
+[errTitle]
+  other = "Fehler"
+[errMsg]
+  other = "Entschuldigung, es ist ein Fehler bei der Uebertragung aufgetretten!"
+[moreFrom]
+  other = "Mehr von {{ .Count }}"
+[discard]
+  other = "Verwerfen"
+[discardComment]
+  other = "Kommentar verwerfen"

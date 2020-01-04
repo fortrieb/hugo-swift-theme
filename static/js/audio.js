@@ -1,10 +1,10 @@
 (function(){
   var waves = new SineWaves({
     el: document.getElementById('waves'),
-    speed: 5,
+    speed: 1.2,
     rotate: 0,
     ease: 'SineInOut',
-    wavesWidth: '75%',
+    wavesWidth: '85%',
     waves: [
     {
       timeModifier: 4,

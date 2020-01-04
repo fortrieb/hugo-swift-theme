@@ -1,11 +1,20 @@
 {{- $scratch := newScratch }}
 {{- if isset .Params "image" }}
   {{- $scratch.Set "image" .Params.image }}
+{{- else if isset .Params "imageLang" }}
+  {{- $scratch.Set "image" .Params.imageLang }}
+  {{- $scratch.Set "image" .Params.imageLang }}
+  {{- $scratch.Set "lang" .Site.Languages.Lang }}
 {{- else }}
-  {{- $scratch.Set "image" "thumbnail.svg" }}
+  {{ $scratch.Set "image" "thumbnail.svg" }}
 {{- end }}
 {{- $image := $scratch.Get "image" }}
-{{- $bg := (path.Join "images" $image | absLangURL) }}
+{{- $bg := ""}}
+{{- if ($scratch.Get "lang") }}
+  {{- $bg = (path.Join "images" $image | absLangURL) }}
+{{- else }}
+  {{- $bg = (path.Join "images" $image | absURL) }}
+{{- end }}
 <li class = 'post_item'>
   <a class = 'post_card' href='{{ .RelPermalink }}' title = '{{ .Title }}' style = 'background-image: url({{ $bg }});'>
   </a>

@@ -1,8 +1,22 @@
 <div class = 'nav-drop'>
   <div class = 'nav-body'>
-    {{- range .Site.Data.menu }}
-      <a href = '{{ absURL .url }}' class = 'nav_item'>{{ .item }}</a>
+    {{ $lang := .Site.Language.Lang }}
+    {{- with index .Site.Data .Site.Language.Lang }}
+    {{ $entries := .menu }}
+      {{- range $entries }}
+        {{ $uri := path.Join $lang .url }}
+        <a href = '{{ absURL $uri }}' class = 'nav_item'>{{ .item }}</a>
+      {{- end }}
     {{- end }}
+    {{/* comment out }}
+    <ul>
+      {{- range .Site.Menus.main }}
+      <li class="main-menu">
+        <a href="{{ absURL .URL }}">{{ .Name }}</a>
+      </li>
+      {{- end }}
+    </ul>
+    {{ */}}
     <div class = 'nav-close'></div>
   </div>
 </div>
